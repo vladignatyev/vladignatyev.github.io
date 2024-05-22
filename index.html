@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+
+    <script src="./lib.js"></script>
+    <script src="./mock.js"></script>
+    <script src="./levels.js"></script>
+    <script src="./levelsdiff.js"></script>
+    <script src="./common.js"></script>
+    <script src="./onboarding.js"></script>
+    <script src="./colors.js"></script>
+    <script src="./game.js"></script>
+    <script src="./localize.js"></script>
+
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/schemes.css">
+  </head>
+  <body>
+
+
+    <div id="onboardingSplash1" class="onboarding-splash">
+      <div>
+
+        <img src="onboarding1.svg" style="width:100%;" />
+      </div>
+    </div>
+    <div id="level">
+      <div class="wrapper">
+      </div>
+    </div>
+
+    <div id="outro">
+        <img id="restartBtn" src="restart-btn.svg" />
+      <!-- <button id="hintBtnWrapper"> -->
+        <div id="hintWrap">
+          <img id="onboardingSplash1Next" style="display: none;" src="okay-btn.svg" />
+
+          <img id="hintArrow" src="arrow.svg" />
+          <img id="hintBtn" src="hint-btn.svg">
+
+        </div>
+      <!-- </button> -->
+      <img id="colorBtn" src="color-btn.svg" />
+      <!-- <button id="restartBtn" class="button">RESTART</button>&nbsp; -->
+      <button style="display: none;" id="newLevelBtn" class="button">LEVEL</button>&nbsp;
+      <!-- <button id="colorBtn" class="button">COLOR</button> -->
+    </div>
+
+
+
+    <script>start();</script>
+
+
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="40px" viewBox="0 0 43 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>color-btn</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CGA" transform="translate(-278.000000, -541.000000)">
+            <g id="color-btn" transform="translate(278.000000, 541.000000)">
+                <rect id="Rectangle" fill="#FFFD40" x="0" y="0" width="43" height="40" rx="15"></rect>
+                <g id="Group" transform="translate(11.000000, 9.000000)" stroke="#000000">
+                    <rect id="Rectangle" fill="#FF8383" x="0" y="0" width="9" height="9"></rect>
+                    <rect id="Rectangle" fill="#87BEFF" x="12" y="0" width="9" height="9"></rect>
+                    <rect id="Rectangle" fill="#FFD1AE" x="0" y="12" width="9" height="9"></rect>
+                    <rect id="Rectangle" fill="#FFFFFF" x="12" y="12" width="9" height="9"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

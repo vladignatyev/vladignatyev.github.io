@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="270px" viewBox="0 0 270 270" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>win</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-166.1%" y="-166.1%" width="432.2%" height="432.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="22" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="40" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CGA" transform="translate(-45.000000, -198.000000)">
+            <g id="win" filter="url(#filter-1)" transform="translate(121.000000, 252.000000)">
+                <circle id="Oval" fill="#92F2AC" cx="59" cy="59" r="59"></circle>
+                <polygon id="Path-2" fill="#FFFFFF" points="19 56.6386364 56.4602052 94.6386364 99.4602052 34 78.9239813 34 52.6398477 68 41.278484 56.6386364"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

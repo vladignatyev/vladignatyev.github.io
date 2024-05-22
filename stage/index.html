@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <style media="screen">
+      textarea { font-family: monospace; background: #333; color: #0f0; }
+    </style>
+    <textarea name="log" rows="60" cols="40"></textarea>
+
+    <script type="text/javascript">
+      var JSInterface = window.JSInterface || { // Mock
+        gameLoaded: function() {logMsg('call')},
+        onboardingStarted: function() {logMsg('call')},
+        onboardingInterrupt: function() {logMsg('call')},
+        onboardingEnded: function() {logMsg('call')},
+        levelStarted: function() {logMsg('call')},
+        levelStateUpdate: function(newState) {logMsg('call')},
+        levelEnded: function(newState) {logMsg('call')},
+        turnMade: function(newState) {logMsg('call')},
+        hintTapped: function(newState) {logMsg('call')},
+        hintShown: function(newState) {logMsg('call')},
+        hintConsumed: function(newState) {logMsg('call')},
+        promoTapped: function(newState) {logMsg('call')},
+        promoShown: function(newState) {logMsg('call')},
+        promoEnded: function(newState) {logMsg('call')},
+        iapTapped: function(newState) {logMsg('call')},
+        trackEvent: function(eventName, eventArg) {logMsg('call')},
+        // onboardingInterrupt: function() {logMsg('call')},
+      }
+    </script>
+    <script type="text/javascript">
+      var log;
+
+      const logMsg = (msg) => log.innerHTML = [log.innerHTML, msg, '\n'].join('');
+
+      async function preInit(){
+        log = document.querySelectorAll('textarea')[0];
+        return;
+      }
+
+      async function selfTest() {
+        JSInterface.gameLoaded(); logMsg('gameLoaded sent.');
+        JSInterface.onboardingStarted(); logMsg('onboardingStarted sent.');
+        JSInterface.onboardingInterrupt(); logMsg('onboardingInterrupt sent.');
+        JSInterface.onboardingEnded(); logMsg('onboardingEnded sent.');
+        JSInterface.levelStarted(); logMsg('levelStarted sent.');
+        const arg = [[0,0,0], [0,1,0], [0,1,1]]; JSInterface.levelStateUpdate(arg); logMsg('levelStateUpdate sent with arg:' + arg);
+        JSInterface.levelEnded(); logMsg('levelEnded sent.');
+        JSInterface.turnMade(); logMsg('turnMade sent.');
+        JSInterface.hintTapped(); logMsg('hintTapped sent.');
+        JSInterface.hintShown(); logMsg('hintShown sent.');
+        JSInterface.hintConsumed(); logMsg('hintConsumed sent.');
+        JSInterface.promoTapped(); logMsg('promoTapped sent.');
+        JSInterface.promoShown(); logMsg('promoShown sent.');
+        JSInterface.promoEnded(); logMsg('promoEnded sent.');
+        JSInterface.iapTapped(); logMsg('iapTapped sent.');
+        JSInterface.trackEvent('gaEventName', 'someValue'); logMsg('trackEvent sent');
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        preInit()
+          .then(() => logMsg('DOMContentLoaded'))
+          .then(() => selfTest())
+      });
+
+      // Public Interface
+      function start(userId, level, levelState) {
+        logMsg(`"start" called for user "${userId}" level "${level}" with initial state "${levelState}"`)
+      }
+
+      function showHint() {
+        logMsg(`"showHint" called`)
+      }
+    </script>
+  </body>
+</html>
