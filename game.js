@@ -297,11 +297,17 @@ function teardown() {
 
 function gameInit() {
   JSInterface.gameLoaded();
+  // generateLevel();
+  // console.log(LEVEL);
+  // console.log(getStateSnapshot());
+  // start(getStateSnapshot());
+  startFirstGame();
 }
 
 function startHintFlow() {
   $('#hintBtn').off('click');
-  JSInterface.hintTapped();
+  // JSInterface.hintTapped();
+  showHint();
 }
 
 $(document).ready(gameInit);
@@ -309,19 +315,36 @@ $(document).ready(gameInit);
 
 // Public Interface
 function start(rawState) {
-  if (!rawState) {
-    startOnboarding();
-  } else {
+  // if (!rawState) {
+  //   startOnboarding();
+  // } else {
 
-     var state = JSON.parse(rawState);
+  //    var state = JSON.parse(rawState);
 
-     if (state.isOnBoarding) {
-       startOnboarding();
-     } else {
-       setColor(state.colorScheme, true);
+  //    if (state.isOnBoarding) {
+  //      startOnboarding();
+  //    } else {
+  //      setColor(state.colorScheme, true);
+  //      LEVEL = state.level;
+  //      currentLevelNum = state.currentLevelNum;
+  //      teardown();
+  //      newLevelHandler();
+  //      setup(false);
+  //      for (var col = 0; col < LEVEL['gridSize']; col++){
+  //        for (var row = 0; row < LEVEL['gridSize']; row++){
+  //          setState(col, row, state['currentGrid'][LEVEL['gridSize'] * row + col]);
+  //        }
+  //      }
+  //      JSInterface.levelStarted();
+  //    }
+  // }
+  // JSInterface.levelStateUpdate(getStateSnapshot());
+     var state = rawState;
+
+      //  setColor(state.colorScheme, true);
        LEVEL = state.level;
        currentLevelNum = state.currentLevelNum;
-       teardown();
+      //  teardown();
        newLevelHandler();
        setup(false);
        for (var col = 0; col < LEVEL['gridSize']; col++){
@@ -330,8 +353,6 @@ function start(rawState) {
          }
        }
        JSInterface.levelStarted();
-     }
-  }
   JSInterface.levelStateUpdate(getStateSnapshot());
 }
 
